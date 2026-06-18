@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom palette colors for Geometric Balance */
+  --color-brand-bg: #050505;
+  --color-brand-surface: #111111;
+  --color-brand-accent: #F27D26;
+  --color-brand-success: #00FF9D;
+  --color-brand-danger: #FF3E3E;
+  --color-brand-border: rgba(255, 255, 255, 0.1);
+  --color-brand-text: #EDEDED;
+  --color-brand-text-dim: #888888;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-accent);
+}
+
+/* Glassmorphism/Flat theme panel utility */
+.glass-panel {
+  background: var(--color-brand-surface);
+  border: 1px solid var(--color-brand-border);
+}
+
+.glass-panel-accent {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-brand-border);
+}
+
+/* Neon text shadows & glow effects */
+.glow-red {
+  box-shadow: 0 0 15px rgba(255, 62, 62, 0.15);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.15);
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px rgba(242, 125, 38, 0.15);
+}
+
+/* Base transitions */
+button, select, input {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Geometric Law Card border */
+.law-card-border {
+  border-right: 4px solid var(--color-brand-accent);
+}
+
